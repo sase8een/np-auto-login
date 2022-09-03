@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 const bot = (async () => {
     const browser = await puppeteer.launch({
-        headless: true,
+        headless: false,
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
     const page = await browser.newPage();
@@ -18,7 +18,7 @@ const bot = (async () => {
 
     // await page.screenshot({ path: 'postlogin.png' });
 
-    await browser.close();
+    // await browser.close();
 })();
 
 module.exports = bot;
