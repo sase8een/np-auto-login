@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 const bot = (async () => {
     const browser = await puppeteer.launch({
         headless: false,
-        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        args: ['--no-sandbox'],
         ignoreDefaultArgs: ['--disable-extensions']
     });
     const page = await browser.newPage();
